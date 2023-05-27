@@ -40,7 +40,7 @@ namespace PostManager.Bussiness.Services
                 {
                     try
                     {
-                        var postsForTag = (await _dataRepositoryAccess.GetPosts(tag.Trim())).ToList();
+                        var postsForTag = (await _dataRepositoryAccess.GetPosts(tag.Trim().ToLower())).ToList();
                         allPosts.AddRange(postsForTag);
                     }
                     catch (InvalidOperationException ex)
