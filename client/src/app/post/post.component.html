@@ -1,0 +1,30 @@
+<div class="rounded-md shadow-md flex flex-col p-4 flex-1">
+  <div class="flex flex-row">
+    <div><mat-icon>account_circle</mat-icon></div>
+    <div>{{ post.author }}</div>
+  </div>
+  <div class="flex flex-row">
+    <div><mat-icon>thumb_up_alt</mat-icon></div>
+    <div>{{ post.likes }}</div>
+  </div>
+  <div class="flex flex-row">
+    <div><mat-icon>library_books</mat-icon></div>
+    <div>{{ post.reads }}</div>
+  </div>
+  <div class="flex flex-row">
+    <div><mat-icon>favorite</mat-icon></div>
+    <div>{{ Math.floor(post.popularity * 100) + "%" }}</div>
+  </div>
+  <div class="flex flex-col">
+    <div>{{ post.tags.length }} Tag(s)</div>
+    <div class="flex flex-row gap-2 my-3 flex-wrap">
+      <div *ngFor="let tag of post.tags">
+        <div
+          class="p-2 min-w-[70px] col-span-1 rounded-full bg-cyan-200 text-center self-center border-solid border border-cyan-700 text-black"
+        >
+          {{ tag }}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

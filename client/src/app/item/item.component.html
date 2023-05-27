@@ -1,0 +1,14 @@
+<div
+  class="flex flex-row items-center shadow-md rounded-md p-2 gap-1 justify-between"
+>
+  <div class="text-xl">{{ item }}</div>
+
+  <div>
+    <button
+      class="bg-red-600 text-white px-4 py-2 rounded-md"
+      (click)="remove.emit()"
+    >
+      Remove
+    </button>
+  </div>
+</div>
